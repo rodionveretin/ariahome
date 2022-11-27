@@ -6,8 +6,7 @@ const BASE_DIR = 'assets/';
 module.exports = {
   entry: {
     index: './src/pages/index/main.js',
-    about: './src/pages/about/main.js',
-    contacts: './src/pages/contacts/main.js',
+    card: './src/pages/card/main.js',
   },
   output: {
     filename: `${BASE_DIR  }js/[name].js`,
@@ -23,16 +22,10 @@ module.exports = {
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/pages/about/tmpl.html',
+      template: './src/pages/card/tmpl.html',
       inject: true,
-      chunks: ['about'],
-      filename: 'about.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/contacts/tmpl.html',
-      inject: true,
-      chunks: ['contacts'],
-      filename: 'contacts.html',
+      chunks: ['card'],
+      filename: 'card.html',
     }),
     new MiniCssExtractPlugin({
       filename: `${BASE_DIR  }css/[name].css`,

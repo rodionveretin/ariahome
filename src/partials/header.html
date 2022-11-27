@@ -1,3 +1,118 @@
 <header class="header">
-  header
+  <div class="header__top header-bar">
+    <span class="header-bar__caption">Подарки на Новый год!</span>
+    <button class="header-bar__button close-bar">
+      <span class="close-bar__text">Закрыть</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 4.5L11.5 11.5" stroke="#BB8E36" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.5 11.5L11.5 4.5" stroke="#BB8E36" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="header__bottom">
+    <a href="#" class="header__logo">
+      <img src="<%= require('../../assets/img/banner.png') %>" alt="Логотип">
+    </a>
+    <button class="header__catalog">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.5 9.5V4.5C3.5 3.94772 3.94772 3.5 4.5 3.5H9.5C10.0523 3.5 10.5 3.94772 10.5 4.5V9.5C10.5 10.0523 10.0523 10.5 9.5 10.5H4.5C3.94772 10.5 3.5 10.0523 3.5 9.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3.5 19.5V14.5C3.5 13.9477 3.94772 13.5 4.5 13.5H9.5C10.0523 13.5 10.5 13.9477 10.5 14.5V19.5C10.5 20.0523 10.0523 20.5 9.5 20.5H4.5C3.94772 20.5 3.5 20.0523 3.5 19.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.5 9.5V4.5C13.5 3.94772 13.9477 3.5 14.5 3.5H19.5C20.0523 3.5 20.5 3.94772 20.5 4.5V9.5C20.5 10.0523 20.0523 10.5 19.5 10.5H14.5C13.9477 10.5 13.5 10.0523 13.5 9.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.5 19.5V14.5C13.5 13.9477 13.9477 13.5 14.5 13.5H19.5C20.0523 13.5 20.5 13.9477 20.5 14.5V19.5C20.5 20.0523 20.0523 20.5 19.5 20.5H14.5C13.9477 20.5 13.5 20.0523 13.5 19.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Каталог</span>
+    </button>
+    <div class="header-dropdown hidden">
+      <div class="header__container">
+        <div class="header-dropdown__wrapper">
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Новинки</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Спальня</a></li>
+            <li class="header-dropdown__item"><a href="#">Постельное белье</a></li>
+            <li class="header-dropdown__item"><a href="#">Одеяла и подушки</a></li>
+            <li class="header-dropdown__item"><a href="#">Отдельные предметы</a></li>
+            <li class="header-dropdown__item"><a href="#">Пледы</a></li>
+            <li class="header-dropdown__item"><a href="#">Покрывала</a></li>
+            <li class="header-dropdown__item"><a href="#">Скидки до -90%</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Ванная</a></li>
+            <li class="header-dropdown__item"><a href="#">Коврики для ванной</a></li>
+            <li class="header-dropdown__item"><a href="#">Для сауны</a></li>
+            <li class="header-dropdown__item"><a href="#">Косметика</a></li>
+            <li class="header-dropdown__item"><a href="#">Наборы для ванной</a></li>
+            <li class="header-dropdown__item"><a href="#">Полотенца</a></li>
+            <li class="header-dropdown__item"><a href="#">Халаты</a></li>
+            <li class="header-dropdown__item"><a href="#">Шторы для ванной</a></li>
+            <li class="header-dropdown__item"><a href="#">Скидки до -90%</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Посуда</a></li>
+            <li class="header-dropdown__item"><a href="#">Наборы посуды</a></li>
+            <li class="header-dropdown__item"><a href="#">Чайные наборы</a></li>
+            <li class="header-dropdown__item"><a href="#">Столовые приборы</a></li>
+            <li class="header-dropdown__item"><a href="#">Бокалы</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Декор для дома</a></li>
+            <li class="header-dropdown__item"><a href="#">Ароматы для дома</a></li>
+            <li class="header-dropdown__item"><a href="#">Декоративные наволочки</a></li>
+            <li class="header-dropdown__item"><a href="#">Коврики для дома</a></li>
+            <li class="header-dropdown__item"><a href="#">Цветы</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Домашняя одежда</a></li>
+            <li class="header-dropdown__item"><a href="#">Пижамы</a></li>
+            <li class="header-dropdown__item"><a href="#">Тапочки</a></li>
+            <li class="header-dropdown__item"><a href="#">Туники и халаты</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Кухня</a></li>
+            <li class="header-dropdown__item"><a href="#">Полотенца</a></li>
+            <li class="header-dropdown__item"><a href="#">Наборы для кухни</a></li>
+            <li class="header-dropdown__item"><a href="#">Салфетки</a></li>
+            <li class="header-dropdown__item"><a href="#">Скатерти</a></li>
+            <li class="header-dropdown__item"><a href="#">Кольца для салфеток</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Красота и здоровье</a></li>
+            <li class="header-dropdown__item"><a href="#">Косметика для тела</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Шторы</a></li>
+            <li class="header-dropdown__item"><a href="#">Тюль</a></li>
+            <li class="header-dropdown__item"><a href="#">Шторы в гостиную</a></li>
+            <li class="header-dropdown__item"><a href="#">Шторы для кухни</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Дети</a></li>
+            <li class="header-dropdown__item"><a href="#">Детские пледы</a></li>
+            <li class="header-dropdown__item"><a href="#">Для малышей</a></li>
+            <li class="header-dropdown__item"><a href="#">Спальня</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Аксессуары</a></li>
+            <li class="header-dropdown__item"><a href="#">Маски для сна</a></li>
+            <li class="header-dropdown__item"><a href="#">Головные уборы</a></li>
+            <li class="header-dropdown__item"><a href="#">Брелоки</a></li>
+            <li class="header-dropdown__item"><a href="#">Косметички</a></li>
+            <li class="header-dropdown__item"><a href="#">Сумки</a></li>
+            <li class="header-dropdown__item"><a href="#">Шкатулки</a></li>
+          </ul>
+          <ul class="header-dropdown__list">
+            <li class="header-dropdown__item"><a href="#">Подарочные карты</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="header__menu">
+      <li class="header__item"><a href="#">Бонусная программа</a></li>
+      <li class="header__item"><a href="#">Подарочные карты</a></li>
+      <li class="header__item"><a href="#">О бренде</a></li>
+      <li class="header__item"><a href="#">Магазины</a></li>
+    </ul>
+    <a href="tel:+78002008280" class="header__phone">8 (800) 200-82-80</a>
+  </div>
 </header>

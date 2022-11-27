@@ -1,104 +1,106 @@
 require('../../assets/scss/main.scss');
 require('./page.scss');
-import Swiper, { Navigation, Pagination } from 'swiper';
-import { headerActivity } from '../../assets/js/bar.es6.js';
-
-Swiper.use([Navigation, Pagination]);
+import Swiper, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  EffectCoverflow,
+} from 'swiper';
+Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
 
 document.addEventListener('DOMContentLoaded', () => {
-  headerActivity();
+  const headerDropdownButton = document.querySelector('.header__catalog');
+  const headerDropdown = document.querySelector('.header-dropdown');
 
-  new Swiper('.region-info__wrapper .swiper', {
-    // Optional parameters
+  headerDropdownButton.addEventListener('click', () => {
+    headerDropdown.classList.toggle('hidden');
+  });
+  const storiesSlider = new Swiper('.stories__slider', {
     direction: 'horizontal',
     loop: false,
-    allowTouchMove: true,
-    slidesPerView: 1.1,
-    grid: {
-      rows: 1,
-      fill: 'row',
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 0,
+      depth: 100,
+      slideShadows: false,
     },
-    breakpoints: {
-      768: {
-        allowTouchMove: false,
-        slidesPerView: 3,
-        grid: {
-          rows: 2,
-          fill: 'row',
-        },
-      },
-      1100: {
-        allowTouchMove: false,
-        slidesPerView: 4,
-        grid: {
-          rows: 4,
-          fill: 'row',
-        },
-      },
-    },
+    slideToClickedSlide: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 200,
+    allowTouchMove: false,
+  });
+  const storiesOpenButtons = document.querySelectorAll(
+    '.stories-round__button'
+  );
+  const storiesContainer = document.querySelector('.stories');
+  const storiesCloseButton = document.querySelector('.stories__close');
+  const storiesMuteButton = document.querySelector('.stories__control');
+  const stories = document.querySelectorAll('.story');
+  let muted = true;
+
+  const closeStoriesContainer = () => {
+    storiesContainer.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  };
+
+  const muteVideo = (el) => {
+    el.muted = true;
+  };
+
+  const unmuteVideo = (el) => {
+    el.muted = false;
+  };
+
+  storiesMuteButton.addEventListener('click', () => {
+    if (muted) {
+      muted = false;
+      storiesMuteButton.classList.add('stories__control--active');
+      for (const story of stories) {
+        story.querySelectorAll('video, audio').forEach((el) => unmuteVideo(el));
+      }
+    } else {
+      muted = true;
+      storiesMuteButton.classList.remove('stories__control--active');
+      for (const story of stories) {
+        story.querySelectorAll('video, audio').forEach((el) => muteVideo(el));
+      }
+    }
   });
 
-  const regionBlock = document.querySelector('.region-info__wrapper');
-  if (regionBlock) {
-    const regionVacBtn = regionBlock.querySelector('.region-info__show-btn');
-    const regionVacsSwiper = regionBlock.querySelector(
-      '.region-info__boxes .swiper-wrapper'
-    );
-    if (regionVacBtn && regionVacsSwiper) {
-      regionVacBtn.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        if (
-          !regionVacsSwiper.classList.contains('swiper-wrapper--show-elements')
-        ) {
-          regionVacsSwiper.classList.add('swiper-wrapper--show-elements');
-          regionVacBtn.style.display = 'none';
-        }
-      });
+  const initProgressBar = (story) => {
+    const storyItems = story.querySelectorAll('.story__content-item');
+    const barElement = `<div class="story__progress-bar"><div class="story__progress-bar-line"></div></div>`;
+    const barPortal = story.querySelector('.story__progress');
+    for (let i = 0; i < storyItems.length; i++) {
+      barPortal.innerHTML += barElement;
     }
-  }
+  };
 
-  const friendBlock = document.querySelector('.friends__content');
-  if (friendBlock) {
-    const friendsPersons = friendBlock.querySelectorAll('.friends__person');
-    const friendsComments = friendBlock.querySelectorAll('.friend-comment');
-    if (friendsPersons.length && friendsComments.length) {
-      friendsPersons.forEach((person) => {
-        person.addEventListener('click', () => {
-          if (!person.classList.contains('friends__person--active')) {
-            const idCurrent = person.getAttribute('data-person');
-            const personActive = friendBlock.querySelector(
-              '.friends__person--active'
-            );
-            const commentActive = friendBlock.querySelector(
-              '.friend-comment--show'
-            );
-            const commentNew = friendBlock.querySelector(
-              `.friend-comment[data-person="${idCurrent}"]`
-            );
-            if (personActive && commentActive) {
-              personActive.classList.remove('friends__person--active');
-              commentActive.classList.remove('friend-comment--show');
-            }
-            person.classList.add('friends__person--active');
-            commentNew.classList.add('friend-comment--show');
-          }
-        });
-      });
-    }
-  }
-
-  const rollerBlocks = document.querySelectorAll('.roller-block');
-  if (rollerBlocks.length) {
-    rollerBlocks.forEach((roller) => {
-      const rollerHidden = roller.querySelector('.roller-block__hidden');
-      const rollerBtn = roller.querySelector('.roller-block__btn');
-      if (rollerBtn && rollerHidden) {
-        rollerBtn.addEventListener('click', (evt) => {
-          evt.preventDefault();
-          rollerHidden.style.display = 'block';
-          rollerBtn.style.display = 'none';
-        });
-      }
+  for (let item = 0; item < storiesOpenButtons.length; item++) {
+    storiesOpenButtons[item].addEventListener('click', () => {
+      storiesSlider.slideTo(item);
+      storiesContainer.focus();
+      storiesContainer.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      const currentStoryItems = stories[item].querySelectorAll(
+        '.story__content-item'
+      );
+      currentStoryItems[0].classList.add('story__content-item_visible');
     });
   }
+
+  for (const story of stories) {
+    initProgressBar(story);
+  }
+
+  storiesCloseButton.addEventListener('click', () => {
+    closeStoriesContainer();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeStoriesContainer();
+    }
+  });
 });

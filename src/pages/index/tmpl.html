@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <title>My homepage</title>
+  <title>Главная</title>
   <meta charset="UTF-8">
   <meta content="no-cache" http-equiv="cache-control"/>
   <meta content="no-cache" http-equiv="pragma"/>
@@ -12,7 +12,514 @@
 <body>
 <%= require('../../partials/header.html?raw') %>
 <main>
-  index
+  <section class="banner">
+    <div class="banner__container">
+      <a href="#" class="banner__wrapper">
+        <div class="banner__text">
+          <div class="banner__subtitle">всё для уюта вашего дома</div>
+          <div class="banner__title">Межсезонная распродажа</div>
+        </div>
+        <div class="banner__offer banner-offer">
+          <span class="banner-offer__discount">75</span>
+          <span class="banner-offer__caption">на всё</span>
+        </div>
+        <div class="banner__img">
+          <img src="<%= require('../../assets/img/banner.png') %>" alt="">
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="categories">
+    <div class="categories__container">
+      <div class="categories__title title">Популярные категории</div>
+      <div class="categories__wrapper">
+        <div class="categories__grid">
+          <a href="#" class="categories__item" style="background-image:url(<%= require('../../assets/img/categories/cat-1.png') %>)">
+            <span class="categories__name">Постельное белье</span>
+          </a>
+          <a href="#" class="categories__item" style="background-image:url(<%= require('../../assets/img/categories/cat-2.png') %>)">
+            <span class="categories__name">Шторы</span>
+          </a>
+          <a href="#" class="categories__item" style="background-image:url(<%= require('../../assets/img/categories/cat-3.png') %>)">
+            <span class="categories__name">Маски для сна</span>
+          </a>
+          <a href="#" class="categories__item" style="background-image:url(<%= require('../../assets/img/categories/cat-4.png') %>)">
+            <span class="categories__name">Банные полотенца</span>
+          </a>
+          <a href="#" class="categories__item" style="background-image:url(<%= require('../../assets/img/categories/cat-5.png') %>)">
+            <span class="categories__name">Столовые приборы</span>
+          </a>
+          <a href="#" class="categories__item" style="background-image:url(<%= require('../../assets/img/categories/cat-6.png') %>)">
+            <span class="categories__name">Покрывала</span>
+          </a>
+          <a href="#" class="categories__item" style="background-image:url(<%= require('../../assets/img/categories/cat-7.png') %>)">
+            <span class="categories__name">Пижамы</span>
+          </a>
+          <a href="#" class="categories__item" style="background-image:url(<%= require('../../assets/img/categories/cat-8.png') %>)">
+            <span class="categories__name">Ароматы для дома</span>
+          </a>
+          <a href="#" class="categories__item" style="background-image:url(<%= require('../../assets/img/categories/cat-9.png') %>)">
+            <span class="categories__name">Пледы</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="advantages">
+    <div class="advantages__container">
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <div class="advantages__img">
+            <img src="<%= require('../../assets/img/advantages-icons/icon-1.svg') %>" alt="">
+          </div>    
+          <span class="advantages__title">Бесплатная доставка</span>
+          <span class="advantages__descr">по всей России при заказе от 3 000 ₽</span>
+        </li>
+        <li class="advantages__item">
+          <div class="advantages__img">
+            <img src="<%= require('../../assets/img/advantages-icons/icon-2.svg') %>" alt="">
+          </div>
+          <span class="advantages__title">Поддержка 24/7</span>
+          <span class="advantages__descr">отвечаем на вопросы ежедневно</span>
+        </li>
+        <li class="advantages__item">
+          <div class="advantages__img">
+            <img src="<%= require('../../assets/img/advantages-icons/icon-3.svg') %>" alt="">
+          </div>
+          <span class="advantages__title">Примерка</span>
+          <span class="advantages__descr">с заботой о своих покупателях</span>
+        </li>
+        <li class="advantages__item">
+          <div class="advantages__img">
+            <img src="<%= require('../../assets/img/advantages-icons/icon-4.svg') %>" alt="">
+          </div>
+          <span class="advantages__title">Частичная оплата</span>
+          <span class="advantages__descr">оплата долями и частичный выкуп</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="products">
+    <div class="products__container">
+      <div class="products__title title">Товар дня</div>
+      <div class="products__wrapper">
+        <div class="products-product">
+          <div class="products-product__header">
+            <button class="products-product__btn products-product__btn--active">
+              <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_751_9596)">
+                  <path d="M21 5.39062C18.5 5.39062 16 7.39062 16 9.39062C16 7.39062 13.5 5.39062 11 5.39062C8.5 5.39062 6.5 7.39062 6.5 10.3906C6.5 13.3906 8.5 19.3906 16 22.3906C23.5 19.3906 25.5 13.3906 25.5 10.3906C25.5 7.39062 23.5 5.39062 21 5.39062Z" fill="white"></path>
+                  <path d="M21 5.39062C18.5 5.39062 16 7.39062 16 9.39062C16 7.39062 13.5 5.39062 11 5.39062C8.5 5.39062 6.5 7.39062 6.5 10.3906C6.5 13.3906 8.5 19.3906 16 22.3906C23.5 19.3906 25.5 13.3906 25.5 10.3906C25.5 7.39062 23.5 5.39062 21 5.39062Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <filter id="filter0_d_751_9596" x="0" y="0.890625" width="32" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                      <feOffset dy="2"></feOffset>
+                      <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+                      <feComposite in2="hardAlpha" operator="out"></feComposite>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"></feColorMatrix>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_751_9596"></feBlend>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_751_9596" result="shape"></feBlend>
+                  </filter>
+                </defs>
+              </svg>
+            </button>
+            <div class="products-product__discount products-product__discount--round">-70%</div>
+            <div class="products-product__sticker">Товар дня</div>
+            <a href="#" class="products-product__img"><img src="<%= require('../../assets/img/products/product-card.png') %>" alt=""></span></a>
+          </div>
+          <div class="products-product__bottom">
+            <div class="products-product__name">
+              <a href="#">Постельное белье Arya Simple Living с покрывалом Susanne 160×220см</a>
+            </div>
+            <div class="products-product__descr">Аромат ванили</div>
+            <div class="products-product__sizes sizes">
+              <button class="sizes__button sizes__button--active">S</button>
+              <button class="sizes__button">M</button>
+              <button class="sizes__button">L</button>
+              <button class="sizes__button">XL</button>
+              <button class="sizes__button">XXL</button>
+            </div>
+            <div class="products-product__prices prices">
+              <span class="prices__value">7&nbsp;719 ₽</span>
+              <del class="prices__old">30&nbsp;876 ₽</del>
+              <span class="prices__status">Под заказ</span>
+            </div>
+            <button class="products-product__button">
+              <span>В корзину</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="offers">
+    <div class="offers__container">
+      <div class="offers__left">
+        <div class="offers__title">Получайте эксклюзивные предложения</div>
+        <div class="offers__descr">Подпишитесь и первыми узнавайте о скидках распродажах</div>
+        <form action="#" class="offers__form form">
+          <div class="form-input">
+            <div class="offers__field">
+              <input data-format="ошибка формата" data-range="Ошибка длины" data-min="2" data-max="10" placeholder="e-mail" type="text">
+            </div>
+          </div>
+          <button class="offers__button">Подписаться</button>
+        </form>
+      </div>
+      <div class="offers__right"></div>
+    </div>
+  </section>
+  <section class="stories-rounds">
+    <div class="stories-rounds__container">
+      <div class="stories-rounds__title">Arya stories</div>
+      <div class="stories-rounds__wrapper">
+        <ul class="stories-rounds__list">
+          <li class="stories-rounds__item">
+            <button class="stories-round__button">
+              <span class="stories-rounds__img">
+                <img src="<%= require('../../assets/img/stories-rounds/story-1.png') %>" alt="">
+              </span>
+              <span class="stories-rounds__caption">Обзор женского халата Arya Relax</span>
+            </button>
+          </li>
+          <li class="stories-rounds__item">
+            <button class="stories-round__button">
+              <span class="stories-rounds__img">
+                <img src="<%= require('../../assets/img/stories-rounds/story-2.png') %>" alt="">
+              </span>
+              <span class="stories-rounds__caption">Создание праздничной атмосферы дома</span>
+            </button>
+          </li>
+          <li class="stories-rounds__item">
+            <button class="stories-round__button">
+              <span class="stories-rounds__img">
+                <img src="<%= require('../../assets/img/stories-rounds/story-3.png') %>" alt="">
+              </span>
+              <span class="stories-rounds__caption">Обзор уютных тапочек Arya Вella</span>
+            </button>
+          </li>
+          <li class="stories-rounds__item">
+            <button class="stories-round__button">
+              <span class="stories-rounds__img">
+                <img src="<%= require('../../assets/img/stories-rounds/story-4.png') %>" alt="">
+              </span>
+              <span class="stories-rounds__caption">Эстетика и стиль домашней одежды</span>
+            </button>
+          </li>
+          <li class="stories-rounds__item">
+            <button class="stories-round__button">
+              <span class="stories-rounds__img">
+                <img src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+              </span>
+              <span class="stories-rounds__caption">Милейшая маска для сна Arya Rabbit Экрю</span>
+            </button>
+          </li>
+          <li class="stories-rounds__item">
+            <button class="stories-round__button">
+              <span class="stories-rounds__img">
+                <img src="<%= require('../../assets/img/stories-rounds/story-6.png') %>" alt="">
+              </span>
+              <span class="stories-rounds__caption">Как выбрать коврик в ванную</span>
+            </button>
+          </li>
+          <li class="stories-rounds__item">
+            <button class="stories-round__button">
+              <span class="stories-rounds__img">
+                <img src="<%= require('../../assets/img/stories-rounds/story-7.png') %>" alt="">
+              </span>
+              <span class="stories-rounds__caption">Обзор полотенец Arya Arno</span>
+            </button>
+          </li>
+          <li class="stories-rounds__item">
+            <button class="stories-round__button">
+              <span class="stories-rounds__img">
+                <img src="<%= require('../../assets/img/stories-rounds/story-8.png') %>" alt="">
+              </span>
+              <span class="stories-rounds__caption">Наслаждаемся осенью вместе с Arya</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="stats">
+    <div class="stats__container">
+      <div class="stats__wrapper">
+          <div class="stats__item">
+            <div class="stats__count">25</div>
+            <div class="stats__descr">лет на рынке</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__count">13</div>
+            <div class="stats__descr">городов</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__count">70</div>
+            <div class="stats__descr">магазинов</div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section class="offers">
+    <div class="offers__container">
+      <div class="offers__wrapper">
+        <div class="offers__left subscribe">
+          <div class="subscribe__title">Получайте эксклюзивные предложения</div>
+          <div class="subscribe__descr">Подпишитесь и первыми узнавайте о скидках распродажах</div>
+          <form action="#" class="subscribe__form form">
+            <div class="form-input">
+              <div class="subscribe__field">
+                <input data-format="ошибка формата" data-range="Ошибка длины" data-min="2" data-max="10" placeholder="e-mail" type="text">
+              </div>
+            </div>
+            <button class="subscribe__button">Подписаться</button>
+          </form>
+        </div>
+        <div class="offers__right">
+          <img src="<%= require('../../assets/img/offer-2.png') %>" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="stories">
+    <button class="stories__control">Звук выключен</button>
+    <button class="stories__close">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.9394 9.00006L0.469727 1.53039L1.53039 0.469727L9.00006 7.9394L16.4697 0.469727L17.5304 1.53039L10.0607 9.00006L17.5304 16.4697L16.4697 17.5304L9.00006 10.0607L1.53039 17.5304L0.469727 16.4697L7.9394 9.00006Z"></path>
+      </svg>
+    </button>
+    <div class="stories__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="stories__item story">
+            <div class="story__details">
+              <div class="story__progress">
+              </div>
+              <div class="story__info">
+                  <img class="story__avatar" src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+                  <div class="story__title">Милейшая маска для сна Arya Rabbit Экрю</div>
+                  <div class="story__date">4 нояб</div>
+              </div>
+            </div>
+            <div class="story__content-items">
+              <div class="story__content-item story__content-item_photo">
+                <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="stories__item story">
+            <div class="story__details">
+              <div class="story__progress">
+              </div>
+              <div class="story__info">
+                  <img class="story__avatar" src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+                  <div class="story__title">Милейшая маска для сна Arya Rabbit Экрю</div>
+                  <div class="story__date">4 нояб</div>
+              </div>
+            </div>
+            <div class="story__content-items">
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video story__content-item_visible">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="stories__item story">
+            <div class="story__details">
+              <div class="story__progress">
+              </div>
+              <div class="story__info" style="transform: scale(1); padding-right: 1%;">
+                  <img class="story__avatar" src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+                  <div class="story__title">Милейшая маска для сна Arya Rabbit Экрю</div>
+                  <div class="story__date">4 нояб</div>
+              </div>
+            </div>
+            <div class="story__content-items">
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video story__content-item_visible">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="stories__item story">
+            <div class="story__details">
+              <div class="story__progress">
+              </div>
+              <div class="story__info" style="transform: scale(1); padding-right: 1%;">
+                  <img class="story__avatar" src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+                  <div class="story__title">Милейшая маска для сна Arya Rabbit Экрю</div>
+                  <div class="story__date">4 нояб</div>
+              </div>
+            </div>
+            <div class="story__content-items">
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video story__content-item_visible">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="stories__item story">
+            <div class="story__details">
+              <div class="story__progress">
+              </div>
+              <div class="story__info" style="transform: scale(1); padding-right: 1%;">
+                  <img class="story__avatar" src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+                  <div class="story__title">Милейшая маска для сна Arya Rabbit Экрю</div>
+                  <div class="story__date">4 нояб</div>
+              </div>
+            </div>
+            <div class="story__content-items">
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video story__content-item_visible">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="stories__item story">
+            <div class="story__details">
+              <div class="story__progress">
+              </div>
+              <div class="story__info" style="transform: scale(1); padding-right: 1%;">
+                  <img class="story__avatar" src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+                  <div class="story__title">Милейшая маска для сна Arya Rabbit Экрю</div>
+                  <div class="story__date">4 нояб</div>
+              </div>
+            </div>
+            <div class="story__content-items">
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video story__content-item_visible">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="stories__item story">
+            <div class="story__details">
+              <div class="story__progress">
+              </div>
+              <div class="story__info" style="transform: scale(1); padding-right: 1%;">
+                  <img class="story__avatar" src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+                  <div class="story__title">Милейшая маска для сна Arya Rabbit Экрю</div>
+                  <div class="story__date">4 нояб</div>
+              </div>
+            </div>
+            <div class="story__content-items">
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video story__content-item_visible">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="stories__item story">
+            <div class="story__details">
+              <div class="story__progress">
+              </div>
+              <div class="story__info" style="transform: scale(1); padding-right: 1%;">
+                  <img class="story__avatar" src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+                  <div class="story__title">Милейшая маска для сна Arya Rabbit Экрю</div>
+                  <div class="story__date">4 нояб</div>
+              </div>
+            </div>
+            <div class="story__content-items">
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
+              </div>
+              <div class="story__content-item story__content-item_video story__content-item_visible">
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 <%= require('../../partials/footer.html?raw') %>
 </body>

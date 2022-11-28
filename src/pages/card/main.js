@@ -11,33 +11,59 @@ document.addEventListener('DOMContentLoaded', () => {
   headerDropdownButton.addEventListener('click', () => {
     headerDropdown.classList.toggle('hidden');
   });
-  new Swiper('.region-info__wrapper .swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: false,
-    allowTouchMove: true,
-    slidesPerView: 1.1,
-    grid: {
-      rows: 1,
-      fill: 'row',
-    },
-    breakpoints: {
-      768: {
-        allowTouchMove: false,
-        slidesPerView: 3,
-        grid: {
-          rows: 2,
-          fill: 'row',
-        },
-      },
-      1100: {
-        allowTouchMove: false,
-        slidesPerView: 4,
-        grid: {
-          rows: 4,
-          fill: 'row',
-        },
-      },
+  new Swiper('.recommendations-slider', {
+    speed: 400,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 5,
+    autoHeight: false,
+    navigation: {
+      nextEl: '.recommendations-slider .products__slider-next',
+      prevEl: '.recommendations-slider .products__slider-prev',
     },
   });
+  new Swiper('.seen-slider', {
+    speed: 400,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 5,
+    autoHeight: false,
+    navigation: {
+      nextEl: '.seen-slider .products__slider-next',
+      prevEl: '.seen-slider .products__slider-prev',
+    },
+  });
+
+  new Swiper('.product-images .swiper', {
+    speed: 400,
+    slidesPerView: 1,
+    centeredSlides: true,
+    // navigation: {
+    //   nextEl: '.seen-slider .products__slider-next',
+    //   prevEl: '.seen-slider .products__slider-prev',
+    // },
+  });
+
+  const cardVideoControlButtons = document.querySelectorAll(
+    '.products-product__control'
+  );
+
+  const playCurrentCardVideo = async (button) => {
+    try {
+      await button.closest('div').querySelector('video').play();
+      button.classList.add('products-product__control--active');
+    } catch (err) {
+      button.classList.remove('products-product__control--active');
+    }
+  };
+  for (const button of cardVideoControlButtons) {
+    button.addEventListener('click', () => {
+      if (!button.classList.contains('products-product__control--active')) {
+        playCurrentCardVideo(button);
+      } else {
+        button.closest('div').querySelector('video').pause();
+        button.classList.remove('products-product__control--active');
+      }
+    });
+  }
 });

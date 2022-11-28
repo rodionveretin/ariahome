@@ -138,16 +138,6 @@ html {
   }
 }
 
-main{
-  margin-top: 111px;
-  @media (max-width: 1296px){
-    margin-top: 78px;
-  }
-  @media (max-width: $mobile){
-    margin-top: 70px;
-  }
-}
-
 //components
 @import "components/btns";
 @import "components/menu-burger";

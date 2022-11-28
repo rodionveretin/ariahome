@@ -9,6 +9,8 @@
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
     margin-right: 30px;
   }
 
@@ -42,6 +44,104 @@
     color: #333333;
   }
 
+  &__search {
+    position: relative;
+    margin: 0 112px;
+    input {
+      padding: 10px 40px 10px 15px;
+      max-width: 240px;
+      background: #FFFFFF;
+      border: 1px solid #DDDDDD;
+      border-radius: 4px;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #CCCCCC;
+      }
+      &:focus {
+        outline: none;
+        border: 1px solid #777777;
+      }
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__favourites {
+    position: relative;
+    margin-left: auto;
+    margin-right: 50px;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    min-width: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    background: #FF3C38;
+    border-radius: 300px;
+  }
+
+  &__login {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    svg {
+      margin-right: 5px;
+    }
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #333333;
+    }
+    &:hover {
+      svg {
+        .path-stroke {
+          stroke: #BB8E36;
+          transition: stroke 0.3s;
+        }
+        .path-fill {
+          fill: #BB8E36;
+          transition: fill 0.3s;
+        }
+      }
+      span {
+        color: #BB8E36;
+        transition: color 0.3s;
+      }
+    }
+  }
 }
 
 .header-bar {

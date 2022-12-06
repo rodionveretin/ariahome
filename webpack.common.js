@@ -7,9 +7,10 @@ module.exports = {
   entry: {
     index: './src/pages/index/main.js',
     card: './src/pages/card/main.js',
+    sitemap: './src/pages/sitemap/main.js',
   },
   output: {
-    filename: `${BASE_DIR  }js/[name].js`,
+    filename: `${BASE_DIR}js/[name].js`,
     path: path.resolve(__dirname, 'dist'),
     // assetModuleFilename: "assets/",
     clean: true,
@@ -27,27 +28,38 @@ module.exports = {
       chunks: ['card'],
       filename: 'card.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/sitemap/tmpl.html',
+      inject: true,
+      chunks: ['sitemap'],
+      filename: 'sitemap.html',
+    }),
     new MiniCssExtractPlugin({
-      filename: `${BASE_DIR  }css/[name].css`,
+      filename: `${BASE_DIR}css/[name].css`,
     }),
   ],
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'resolve-url-loader', 'postcss-loader',
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'resolve-url-loader',
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
             },
-          }],
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: `${BASE_DIR  }img/[name][ext][query]`,
+          filename: `${BASE_DIR}img/[name][ext][query]`,
         },
       },
       {

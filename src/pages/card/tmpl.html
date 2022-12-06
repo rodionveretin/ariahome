@@ -12,134 +12,178 @@
 <body>
 <%= require('../../partials/header.html?raw') %>
 <main>
-  <section class="breadcrumbs">
-    <div class="breadcrumbs__container">
-      <nav class="breadcrumbs__wrapper">
-        <ol class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a href="#">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.5 5.5L2.5 7.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M11.5 5.5L13.5 7.5" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M11.5 5.5L8 2L4.5 5.5V12.5H11.5V5.5Z" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#">
-              Каталог
-            </a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#">
-              Страшные Скидки
-            </a>
-          </li>
-          <li class="breadcrumbs__item">
-            Полотенце Arya Однотонное Miranda Soft
-          </li>
-        </ol>
-      </nav>
-    </div>
-  </section>
+  <%= require('../../partials/breadcrumbs.html?raw') %>
   <section class="product">
     <div class="product__container">
       <div class="product__wrapper">
         <div class="product__left">
           <div class="product__gallery gallery">
             <div class="gallery__navigation product-navigation">
-              fdgdfh
-            </div>
-            <div class="gallery__images product-images">
-              <div class="product-images__wrapper">
-                <div class="swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="product-images__slide">
-                        <div class="product-images__video">
-                          <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop=""></video>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-images__slide">
-                        <div class="product-images__img">
-                          <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-images__slide">
-                        <div class="product-images__img">
-                          <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-images__slide">
-                        <div class="product-images__img">
-                          <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-images__slide">
-                        <div class="product-images__img">
-                          <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-images__slide">
-                        <div class="product-images__img">
-                          <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-images__slide">
-                        <div class="product-images__img">
-                          <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-images__slide">
-                        <div class="product-images__img">
-                          <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
-                        </div>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__video">
+                        <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__images product-images">
+              <div class="product-images__prev">
+                <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0.5L0.5 6L5.5 11.5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="product-images__next">
+                <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.5 0.5L5.5 6L0.5 11.5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__video">
+                        <div class="product-preview">
+                          <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                        </div>
+                        <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop=""></video>
+                        <button class="product-images__button"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-images__slide">
+                      <div class="product-images__img">
+                        <img src="<%= require('../../assets/img/product-img.png') %>" alt="">
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="product__description description">
-            <div class="description__title title">Описание</div>
-            <p class="description__paragraph">
-              Халат Arya Miranda Soft синего цвета, выполнен из высококачественного хлопка. Приятная на ощупь ворсинистая фактура ткани. Халат хорошо впитывает влагу. Можно использовать для повседневной домашней носки. Подходит для мужчин и женщин.
-            </p>
-            <button class="description__expand">Развернуть</button>
-          </div>
-          <div class="product__description description">
-            <div class="description__title title">Уход</div>
-            <p class="description__paragraph">
-              Стирать в прохладной воде (t=40 С); Химчистка с углеводородом и хлорэтиленом; Отбеливание запрещено; Глажка при низкой температуре (t&lt;110 C); Сушка и при средней температуре:
-            </p>
+          <div class="product__info">
+            <div class="product__description description">
+              <div class="description__title title">Описание</div>
+              <p class="description__paragraph">
+                Халат Arya Miranda Soft синего цвета, выполнен из высококачественного хлопка. Приятная на ощупь ворсинистая фактура ткани. Халат хорошо впитывает влагу. Можно использовать для повседневной домашней носки. Подходит для мужчин и женщин.
+              </p>
+              <button class="description__expand">Развернуть</button>
+            </div>
+            <div class="product__description description">
+              <div class="description__title title">Уход</div>
+              <p class="description__paragraph">
+                Стирать в прохладной воде (t=40 С); Химчистка с углеводородом и хлорэтиленом; Отбеливание запрещено; Глажка при низкой температуре (t&lt;110 C); Сушка и при средней температуре:
+              </p>
+            </div>
           </div>
         </div>
         <div class="product__right">
-          <span class="product__code">Артикул: 8680943039507</span>
-          <div class="product__title">Полотенце Arya Miranda Soft однотонное бежевое 70×140</div>
-          <button class="product__fav product__fav--active">
-            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 0.5C12.5 0.5 10 2.5 10 4.5C10 2.5 7.5 0.5 5 0.5C2.5 0.5 0.5 2.5 0.5 5.5C0.5 8.5 2.5 14.5 10 17.5C17.5 14.5 19.5 8.5 19.5 5.5C19.5 2.5 17.5 0.5 15 0.5Z" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Отложить</span>
-          </button>
+          <div class="product__header">
+            <span class="product__code">Артикул: 8680943039507</span>
+            <div class="product__title">Полотенце Arya Miranda Soft однотонное бежевое 70×140</div>
+            <button class="product__fav product__fav--active">
+              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 0.5C12.5 0.5 10 2.5 10 4.5C10 2.5 7.5 0.5 5 0.5C2.5 0.5 0.5 2.5 0.5 5.5C0.5 8.5 2.5 14.5 10 17.5C17.5 14.5 19.5 8.5 19.5 5.5C19.5 2.5 17.5 0.5 15 0.5Z" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Отложить</span>
+            </button>
+          </div>
           <div class="product__sizes size">
             <div class="size__title title">Размер</div>
             <div class="size__wrapper">
@@ -258,6 +302,18 @@
                   <span class="options__caption">Бежевый</span>
                 </a>
               </li>
+              <li class="options__item">
+                <a href="#" class="options__button">
+                  <span class="options__img"><img src="<%= require('../../assets/img/product-options/option-10.png') %>" alt=""></span>
+                  <span class="options__caption">Бежевый</span>
+                </a>
+              </li>
+              <li class="options__item">
+                <a href="#" class="options__button">
+                  <span class="options__img"><img src="<%= require('../../assets/img/product-options/option-10.png') %>" alt=""></span>
+                  <span class="options__caption">Бежевый</span>
+                </a>
+              </li>
             </ul>
           </div>
           <div class="product__delivery delivery">
@@ -265,6 +321,21 @@
             <p class="delivery__paragraph">Бесплатно по всей России при заказе от 3 000 ₽</p>
             <p class="delivery__paragraph delivery__paragraph--gold">Москва от 165 ₽</p>
             <p class="delivery__paragraph delivery__paragraph--gold">Срочная доставка сервисом Яндекс</p>
+          </div>
+          <div class="product__info product__info--mobile">
+            <div class="product__description description">
+              <div class="description__title title">Описание</div>
+              <p class="description__paragraph">
+                Халат Arya Miranda Soft синего цвета, выполнен из высококачественного хлопка. Приятная на ощупь ворсинистая фактура ткани. Халат хорошо впитывает влагу. Можно использовать для повседневной домашней носки. Подходит для мужчин и женщин.
+              </p>
+              <button class="description__expand">Развернуть</button>
+            </div>
+            <div class="product__description description">
+              <div class="description__title title">Уход</div>
+              <p class="description__paragraph">
+                Стирать в прохладной воде (t=40 С); Химчистка с углеводородом и хлорэтиленом; Отбеливание запрещено; Глажка при низкой температуре (t&lt;110 C); Сушка и при средней температуре:
+              </p>
+            </div>
           </div>
           <div class="product__specs specs">
             <div class="specs__column">
@@ -364,7 +435,7 @@
     <div class="products__container">
       <div class="products__title title">С этим товаром покупают</div>
       <div class="products__slider recommendations-slider">
-        <div class="swiper recommendations-slider">
+        <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="products-product">
@@ -393,6 +464,9 @@
                     <div class="products-product__discount products-product__discount--corner-brown">-70%</div>
                     <div class="products-product__sticker">Товар дня</div>
                     <span class="products-product__video">
+                      <div class="product-preview">
+                        <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                      </div>
                       <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" muted="" preload="metadata" loop></video>
                       <button class="products-product__control"></button>
                     </span>
@@ -492,6 +566,9 @@
                     <div class="products-product__discount products-product__discount--corner-brown">-70%</div>
                     <div class="products-product__sticker">Товар дня</div>
                     <span class="products-product__video">
+                      <div class="product-preview">
+                        <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                      </div>
                       <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                       <button class="products-product__control"></button>
                     </span>
@@ -541,6 +618,9 @@
                     <div class="products-product__discount products-product__discount--retro">-70%</div>
                     <div class="products-product__sticker">Товар дня</div>
                     <span class="products-product__video">
+                      <div class="product-preview">
+                        <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                      </div>
                       <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                       <button class="products-product__control"></button>
                     </span>
@@ -621,13 +701,14 @@
           </svg>
         </div>
       </div>
+      <button class="products__button"><span>Показать еще</span></button>
     </div>
   </section>
   <section class="products">
     <div class="products__container">
       <div class="products__title title">Вы интересовались</div>
       <div class="products__slider seen-slider">
-        <div class="swiper seen-slider">
+        <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="products-product">
@@ -656,6 +737,9 @@
                     <div class="products-product__discount products-product__discount--corner-brown">-70%</div>
                     <div class="products-product__sticker">Товар дня</div>
                     <span class="products-product__video">
+                      <div class="product-preview">
+                        <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                      </div>
                       <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" muted="" preload="metadata" loop></video>
                       <button class="products-product__control"></button>
                     </span>
@@ -755,6 +839,9 @@
                     <div class="products-product__discount products-product__discount--corner-brown">-70%</div>
                     <div class="products-product__sticker">Товар дня</div>
                     <span class="products-product__video">
+                      <div class="product-preview">
+                        <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                      </div>
                       <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                       <button class="products-product__control"></button>
                     </span>
@@ -804,6 +891,9 @@
                     <div class="products-product__discount products-product__discount--retro">-70%</div>
                     <div class="products-product__sticker">Товар дня</div>
                     <span class="products-product__video">
+                      <div class="product-preview">
+                        <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                      </div>
                       <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                       <button class="products-product__control"></button>
                     </span>
@@ -884,6 +974,7 @@
           </svg>
         </div>
       </div>
+      <button class="products__button"><span>Показать еще</span></button>
     </div>
   </section>
 </main>

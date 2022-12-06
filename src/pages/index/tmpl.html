@@ -17,7 +17,7 @@
       <a href="#" class="banner__wrapper">
         <div class="banner__text">
           <div class="banner__subtitle">всё для уюта вашего дома</div>
-          <div class="banner__title">Межсезонная распродажа</div>
+          <div class="banner__title">Межсезонная <br> распродажа</div>
         </div>
         <div class="banner__offer banner-offer">
           <span class="banner-offer__discount">75</span>
@@ -72,29 +72,37 @@
           <div class="advantages__img">
             <img src="<%= require('../../assets/img/advantages-icons/icon-1.svg') %>" alt="">
           </div>    
-          <span class="advantages__title">Бесплатная доставка</span>
-          <span class="advantages__descr">по всей России при заказе от 3 000 ₽</span>
+          <div class="advantages__inner">
+            <span class="advantages__title">Бесплатная доставка</span>
+            <span class="advantages__descr">по всей России при заказе от 3&nbsp;000&nbsp;₽</span>
+          </div>
         </li>
         <li class="advantages__item">
           <div class="advantages__img">
             <img src="<%= require('../../assets/img/advantages-icons/icon-2.svg') %>" alt="">
           </div>
-          <span class="advantages__title">Поддержка 24/7</span>
-          <span class="advantages__descr">отвечаем на вопросы ежедневно</span>
+          <div class="advantages__inner">
+            <span class="advantages__title">Поддержка 24/7</span>
+            <span class="advantages__descr">отвечаем на вопросы ежедневно</span>
+          </div>
         </li>
         <li class="advantages__item">
           <div class="advantages__img">
             <img src="<%= require('../../assets/img/advantages-icons/icon-3.svg') %>" alt="">
           </div>
-          <span class="advantages__title">Примерка</span>
-          <span class="advantages__descr">с заботой о своих покупателях</span>
+          <div class="advantages__inner">
+            <span class="advantages__title">Примерка</span>
+            <span class="advantages__descr">с заботой о своих покупателях</span>
+          </div>
         </li>
         <li class="advantages__item">
           <div class="advantages__img">
             <img src="<%= require('../../assets/img/advantages-icons/icon-4.svg') %>" alt="">
           </div>
-          <span class="advantages__title">Частичная оплата</span>
-          <span class="advantages__descr">оплата долями и частичный выкуп</span>
+          <div class="advantages__inner">
+            <span class="advantages__title">Частичная оплата</span>
+            <span class="advantages__descr">оплата долями и частичный выкуп</span>
+          </div>
         </li>
       </ul>
     </div>
@@ -129,6 +137,9 @@
               <div class="products-product__discount products-product__discount--corner">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -220,6 +231,9 @@
               <div class="products-product__discount products-product__discount--corner">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -267,6 +281,9 @@
               <div class="products-product__discount products-product__discount--retro">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -357,6 +374,9 @@
               <div class="products-product__discount products-product__discount--round">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -411,6 +431,9 @@
               <div class="products-product__discount products-product__discount--round">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -550,6 +573,9 @@
               <div class="products-product__discount products-product__discount--label">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -573,13 +599,14 @@
           </div>
         </div>
       </div>
+      <button class="products__button"><span>Показать еще</span></button>
     </div>
   </section>
   <section class="offers">
     <div class="offers__container">
       <div class="offers__wrapper">
         <div class="offers__left">
-          <div class="offers__title">Купите сейчас — платите долями</div>
+          <div class="offers__title">Купите сейчас — <br> платите долями</div>
           <div class="offers__descr">Без кредита и переплат</div>
           <a href="#" class="offers__button">Подробнее об условиях</a>
         </div>
@@ -619,6 +646,9 @@
               <div class="products-product__discount products-product__discount--corner-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -710,6 +740,9 @@
               <div class="products-product__discount products-product__discount--corner-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -757,6 +790,9 @@
               <div class="products-product__discount products-product__discount--retro-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -847,6 +883,9 @@
               <div class="products-product__discount products-product__discount--round-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -901,6 +940,9 @@
               <div class="products-product__discount products-product__discount--round-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -1040,6 +1082,9 @@
               <div class="products-product__discount products-product__discount--label-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -1063,78 +1108,97 @@
           </div>
         </div>
       </div>
+      <button class="products__button"><span>Показать еще</span></button>
     </div>
   </section>
   <section class="stories-rounds">
-    <div class="stories-rounds__container">
-      <div class="stories-rounds__title">Arya stories</div>
-      <div class="stories-rounds__wrapper">
-        <ul class="stories-rounds__list">
-          <li class="stories-rounds__item">
-            <button class="stories-round__button">
-              <span class="stories-rounds__img">
-                <img src="<%= require('../../assets/img/stories-rounds/story-1.png') %>" alt="">
-              </span>
-              <span class="stories-rounds__caption">Обзор женского халата Arya Relax</span>
-            </button>
-          </li>
-          <li class="stories-rounds__item">
-            <button class="stories-round__button">
-              <span class="stories-rounds__img">
-                <img src="<%= require('../../assets/img/stories-rounds/story-2.png') %>" alt="">
-              </span>
-              <span class="stories-rounds__caption">Создание праздничной атмосферы дома</span>
-            </button>
-          </li>
-          <li class="stories-rounds__item">
-            <button class="stories-round__button">
-              <span class="stories-rounds__img">
-                <img src="<%= require('../../assets/img/stories-rounds/story-3.png') %>" alt="">
-              </span>
-              <span class="stories-rounds__caption">Обзор уютных тапочек Arya Вella</span>
-            </button>
-          </li>
-          <li class="stories-rounds__item">
-            <button class="stories-round__button">
-              <span class="stories-rounds__img">
-                <img src="<%= require('../../assets/img/stories-rounds/story-4.png') %>" alt="">
-              </span>
-              <span class="stories-rounds__caption">Эстетика и стиль домашней одежды</span>
-            </button>
-          </li>
-          <li class="stories-rounds__item">
-            <button class="stories-round__button">
-              <span class="stories-rounds__img">
-                <img src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
-              </span>
-              <span class="stories-rounds__caption">Милейшая маска для сна Arya Rabbit Экрю</span>
-            </button>
-          </li>
-          <li class="stories-rounds__item">
-            <button class="stories-round__button">
-              <span class="stories-rounds__img">
-                <img src="<%= require('../../assets/img/stories-rounds/story-6.png') %>" alt="">
-              </span>
-              <span class="stories-rounds__caption">Как выбрать коврик в ванную</span>
-            </button>
-          </li>
-          <li class="stories-rounds__item">
-            <button class="stories-round__button">
-              <span class="stories-rounds__img">
-                <img src="<%= require('../../assets/img/stories-rounds/story-7.png') %>" alt="">
-              </span>
-              <span class="stories-rounds__caption">Обзор полотенец Arya Arno</span>
-            </button>
-          </li>
-          <li class="stories-rounds__item">
-            <button class="stories-round__button">
-              <span class="stories-rounds__img">
-                <img src="<%= require('../../assets/img/stories-rounds/story-8.png') %>" alt="">
-              </span>
-              <span class="stories-rounds__caption">Наслаждаемся осенью вместе с Arya</span>
-            </button>
-          </li>
-        </ul>
+    <div class="stories-rounds__title">Arya stories</div>
+    <div class="stories-rounds__wrapper">
+      <div class="stories-rounds__list">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="stories-rounds__item">
+                <button class="stories-round__button">
+                  <div class="stories-rounds__img">
+                    <img src="<%= require('../../assets/img/stories-rounds/story-1.png') %>" alt="">
+                  </div>
+                  <span class="stories-rounds__caption">Обзор женского халата Arya Relax</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="stories-rounds__item">
+                <button class="stories-round__button">
+                  <div class="stories-rounds__img">
+                    <img src="<%= require('../../assets/img/stories-rounds/story-2.png') %>" alt="">
+                  </div>
+                  <span class="stories-rounds__caption">Создание праздничной атмосферы дома</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="stories-rounds__item">
+                <button class="stories-round__button">
+                  <div class="stories-rounds__img">
+                    <img src="<%= require('../../assets/img/stories-rounds/story-3.png') %>" alt="">
+                  </div>
+                  <span class="stories-rounds__caption">Обзор уютных тапочек Arya Вella</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="stories-rounds__item">
+                <button class="stories-round__button">
+                  <div class="stories-rounds__img">
+                    <img src="<%= require('../../assets/img/stories-rounds/story-4.png') %>" alt="">
+                  </div>
+                  <span class="stories-rounds__caption">Эстетика и стиль домашней одежды</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="stories-rounds__item">
+                <button class="stories-round__button">
+                  <div class="stories-rounds__img">
+                    <img src="<%= require('../../assets/img/stories-rounds/story-5.png') %>" alt="">
+                  </div>
+                  <span class="stories-rounds__caption">Милейшая маска для сна Arya Rabbit Экрю</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="stories-rounds__item">
+                <button class="stories-round__button">
+                  <div class="stories-rounds__img">
+                    <img src="<%= require('../../assets/img/stories-rounds/story-6.png') %>" alt="">
+                  </div>
+                  <span class="stories-rounds__caption">Как выбрать коврик в ванную</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="stories-rounds__item">
+                <button class="stories-round__button">
+                  <div class="stories-rounds__img">
+                    <img src="<%= require('../../assets/img/stories-rounds/story-7.png') %>" alt="">
+                  </div>
+                  <span class="stories-rounds__caption">Обзор полотенец Arya Arno</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="stories-rounds__item">
+                <button class="stories-round__button">
+                  <div class="stories-rounds__img">
+                    <img src="<%= require('../../assets/img/stories-rounds/story-8.png') %>" alt="">
+                  </div>
+                  <span class="stories-rounds__caption">Наслаждаемся осенью вместе с Arya</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1168,6 +1232,9 @@
               <div class="products-product__discount products-product__discount--corner-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -1259,6 +1326,9 @@
               <div class="products-product__discount products-product__discount--corner-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -1306,6 +1376,9 @@
               <div class="products-product__discount products-product__discount--retro-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -1396,6 +1469,9 @@
               <div class="products-product__discount products-product__discount--round-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -1450,6 +1526,9 @@
               <div class="products-product__discount products-product__discount--round-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -1589,6 +1668,9 @@
               <div class="products-product__discount products-product__discount--label-brown">-70%</div>
               <div class="products-product__sticker">Товар дня</div>
               <span class="products-product__video">
+                <div class="product-preview">
+                  <img src="<%= require('../../assets/img/preview.jpeg') %>" alt="">
+                </div>
                 <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" muted="" preload="metadata" loop></video>
                 <button class="products-product__control"></button>
               </span>
@@ -1612,6 +1694,7 @@
           </div>
         </div>
       </div>
+      <button class="products__button"><span>Показать еще</span></button>
     </div>
   </section>
   <section class="about">
@@ -1641,7 +1724,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section>  
   <section class="stats">
     <div class="stats__container">
       <div class="stats__wrapper">
@@ -1660,16 +1743,16 @@
       </div>
     </div>
   </section>
-  <section class="offers">
+  <section class="offers offers--subscribe">
     <div class="offers__container">
       <div class="offers__wrapper">
         <div class="offers__left subscribe">
           <div class="subscribe__title">Получайте эксклюзивные предложения</div>
           <div class="subscribe__descr">Подпишитесь и первыми узнавайте о скидках распродажах</div>
           <form action="#" class="subscribe__form form">
-            <div class="form-input">
+            <div class="form-input form-input--mail">
               <div class="subscribe__field">
-                <input data-format="ошибка формата" data-range="Ошибка длины" data-min="2" data-max="10" placeholder="e-mail" type="text">
+                <input data-format="Неверный формат" data-range="Ошибка длины" data-min="2" data-max="50" placeholder="e-mail" type="text">
               </div>
             </div>
             <button class="subscribe__button">Подписаться</button>
@@ -1702,26 +1785,26 @@
               </div>
             </div>
             <div class="story__content-items">
-              <div class="story__content-item story__content-item_photo">
+              <div class="story__content-item story__content-item_photo story__content-item_visible">
                 <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
               </div>
               <div class="story__content-item story__content-item_video">
-                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4"></video>
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_casa_leggera_16.11.mp4" muted preload="metadata"></video>
               </div>
               <div class="story__content-item story__content-item_video">
-                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4"></video>
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
               </div>
               <div class="story__content-item story__content-item_video">
-                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4"></video>
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
               </div>
               <div class="story__content-item story__content-item_video">
-                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4"></video>
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
               </div>
               <div class="story__content-item story__content-item_video">
-                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4"></video>
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
               </div>
               <div class="story__content-item story__content-item_video">
-                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4"></video>
+                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
               </div>
             </div>
           </div>
@@ -1738,16 +1821,16 @@
               </div>
             </div>
             <div class="story__content-items">
-              <div class="story__content-item story__content-item_video">
+              <div class="story__content-item story__content-item_video story__content-item_visible">
                 <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
               </div>
-              <div class="story__content-item story__content-item_photo hidden">
+              <div class="story__content-item story__content-item_photo">
                 <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
               </div>
-              <div class="story__content-item story__content-item_video hidden">
+              <div class="story__content-item story__content-item_video">
                 <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
               </div>
-              <div class="story__content-item story__content-item_photo hidden">
+              <div class="story__content-item story__content-item_photo">
                 <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
               </div>
             </div>
@@ -1765,14 +1848,14 @@
               </div>
             </div>
             <div class="story__content-items">
-              <div class="story__content-item story__content-item_video">
-                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
+              <div class="story__content-item story__content-item_photo story__content-item_visible">
+                <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
               </div>
               <div class="story__content-item story__content-item_photo">
                 <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
               </div>
-              <div class="story__content-item story__content-item_video">
-                <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_manlypro_12.11.mp4" muted preload="metadata"></video>
+              <div class="story__content-item story__content-item_photo">
+                <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
               </div>
               <div class="story__content-item story__content-item_photo">
                 <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
@@ -1792,7 +1875,7 @@
               </div>
             </div>
             <div class="story__content-items">
-              <div class="story__content-item story__content-item_photo">
+              <div class="story__content-item story__content-item_photo story__content-item_visible">
                 <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
               </div>
               <div class="story__content-item story__content-item_video">
@@ -1801,7 +1884,7 @@
               <div class="story__content-item story__content-item_photo">
                 <img src="https://goldapple.ru/media/stories/f/i/file_18.jpg" alt="" class="story__image">
               </div>
-              <div class="story__content-item story__content-item_video story__content-item_visible">
+              <div class="story__content-item story__content-item_video">
                 <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new_essential_2.11.mp4" muted preload="metadata"></video>
               </div>
             </div>
@@ -1819,7 +1902,7 @@
               </div>
             </div>
             <div class="story__content-items">
-              <div class="story__content-item story__content-item_video">
+              <div class="story__content-item story__content-item_video story__content-item_visible">
                 <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
               </div>
               <div class="story__content-item story__content-item_video">
@@ -1846,7 +1929,7 @@
               </div>
             </div>
             <div class="story__content-items">
-              <div class="story__content-item story__content-item_video">
+              <div class="story__content-item story__content-item_video story__content-item_visible">
                 <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
               </div>
               <div class="story__content-item story__content-item_video">
@@ -1873,7 +1956,7 @@
               </div>
             </div>
             <div class="story__content-items">
-              <div class="story__content-item story__content-item_video">
+              <div class="story__content-item story__content-item_video story__content-item_visible">
                 <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
               </div>
               <div class="story__content-item story__content-item_video">
@@ -1900,7 +1983,7 @@
               </div>
             </div>
             <div class="story__content-items">
-              <div class="story__content-item story__content-item_video">
+              <div class="story__content-item story__content-item_video story__content-item_visible">
                 <video class="story__video" src="https://goldapple.ru/media/stories/n/e/new__svr_19.11.mp4" muted preload="metadata"></video>
               </div>
               <div class="story__content-item story__content-item_video">

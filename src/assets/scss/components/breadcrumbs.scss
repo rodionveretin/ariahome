@@ -1,23 +1,60 @@
-.breadcrumbs{
-    margin-bottom: 80px;
-  
-    &__list{
-      display: flex;
-      align-content: center;
+.breadcrumbs {
+  overflow: auto;
+
+  margin: 130px 0 80px 0;
+
+  @media (max-width: 600px) {
+    width: 200vw;
+    margin: 90px 0 32px 0;
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1700px;
+    @media (max-width: 1760px) {
+      padding: 0;
+      margin-left: calc(100vw - (100vw - 30px));
+      max-width: unset;
     }
-  
-    &__item{
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 140%;
+    @media (max-width: 991px) {
+      margin-left: calc(100vw - (100vw - 16px));
     }
-  
-    &__item:not(:last-child){
-      margin-right: 5px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #777777;
+
+    &:first-child {
+      a {
+        display: flex;
+      }
     }
-  
-    &__link::after{
-      display: inline-block;
-      content: ' /';
+
+    &:not(:last-child) {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: (calc(100% + 4px));
+        width: 16px;
+        height: 16px;
+        transform: translateY(-50%);
+        content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 8H13.5' stroke='%23777777' stroke-linecap='round'/%3E%3Cpath d='M11.5 6L13.5 8L11.5 10' stroke='%23777777' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
     }
+  }
+
+  &__item:not(:last-child){
+    margin-right: 5px;
+  }
 }

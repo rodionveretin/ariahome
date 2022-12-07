@@ -39,30 +39,20 @@ main {
   @media (max-width: 600px) {
     height: 375px;
   }
-  &__video {
-    position: relative;
-  }
   &__button {
-    position: absolute;
+    text-align: center;
+    position: relative;
     top: 50%;
-    left: 50%;
-    &::after {
-      position: absolute;
-      z-index: 10;
-      top: 50%;
-      left: 50%;
-      z-index: 10;
-      height: 80px;
-      width: 80px;
-      transform: translate(-50%, -50%);
-      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 80 17.9086 80 40Z' fill='%23333333' fill-opacity='0.5'/%3E%3Cpath d='M58 40L30 58V22L58 40Z' stroke='white' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-      content: '';
-    }
-    &--active {
-      &::after {
-        background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 80 17.9086 80 40Z' fill='%23333333' fill-opacity='0.5'/%3E%3Crect x='26' y='24' width='7' height='33' fill='white'/%3E%3Crect x='46' y='24' width='7' height='33' fill='white'/%3E%3C/svg%3E%0A");
+    transform: translateY(-50%);
+    @media (max-width: 600px) {
+      svg {
+        width: 48px;
+        height: 48px;
       }
     }
+  }
+  &__video {
+    position: relative;
   }
   &__img {
     width: max-content;
@@ -75,12 +65,12 @@ main {
     }
   }
   &__video {
-    width: max-content;
-    height: max-content;
+    width: 100%;
     max-width: 100%;
+    height: 100%;
     margin: auto auto;
-    video {
-      max-width: 100%;
+    iframe {
+      width: 100%;
       height: 100%;
     }
   }
@@ -91,11 +81,13 @@ main {
     justify-content: center;
     align-items: center;
     video,
+    iframe,
     img {
       opacity: 1;
       transition: opacity 0.3s;
     }
     &--active {
+      iframe,
       video,
       img {
         opacity: 0.5;
@@ -126,19 +118,6 @@ main {
   }
   &__next {
     right: 30px;
-  }
-}
-
-.product-preview {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 }
 
@@ -484,7 +463,7 @@ main {
       object-fit: cover;
     }
 
-    video {
+    video, iframe {
       width: 100%;
       height: 100%;
       object-fit: cover;

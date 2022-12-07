@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     speed: 400,
     slidesPerView: 6,
     spaceBetween: 15,
+    watchOverflow: true,
     breakpoints: {
       0: {
         direction: 'horizontal',
@@ -177,46 +178,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const cardVideoControlButtons = document.querySelectorAll(
-    '.products-product__control'
-  );
+  // const cardVideoControlButtons = document.querySelectorAll(
+  //   '.products-product__control'
+  // );
 
-  const playCurrentCardVideo = async (button) => {
-    try {
-      await button.closest('div').querySelector('video').play();
-      button.classList.add(`${button.className}--active`);
-    } catch (err) {
-      button.classList.remove(`${button.className}--active`);
-    }
-  };
-  for (const button of cardVideoControlButtons) {
-    button.addEventListener('click', () => {
-      if (!button.classList.contains('products-product__control--active')) {
-        playCurrentCardVideo(button);
-        const preview = button.closest('div').querySelector('.product-preview');
-        if (!preview.classList.contains('hidden')) {
-          preview.classList.add('hidden');
-        }
-      } else {
-        button.closest('div').querySelector('video').pause();
-        button.classList.remove('products-product__control--active');
-      }
-    });
-  }
-  const videoPlayButton = document.querySelectorAll('.product-images__button');
+  // const playCurrentCardVideo = async (button) => {
+  //   try {
+  //     await button.closest('div').querySelector('video').play();
+  //     button.classList.add(`${button.className}--active`);
+  //   } catch (err) {
+  //     button.classList.remove(`${button.className}--active`);
+  //   }
+  // };
+  // for (const button of cardVideoControlButtons) {
+  //   button.addEventListener('click', () => {
+  //     if (!button.classList.contains('products-product__control--active')) {
+  //       playCurrentCardVideo(button);
+  //     } else {
+  //       button.closest('div').querySelector('video').pause();
+  //       button.classList.remove('products-product__control--active');
+  //     }
+  //   });
+  // }
+  // const videoPlayButton = document.querySelectorAll('.product-images__button');
 
-  for (const button of videoPlayButton) {
-    button.addEventListener('click', () => {
-      if (!button.classList.contains('product-images__button--active')) {
-        playCurrentCardVideo(button);
-        const preview = button.closest('div').querySelector('.product-preview');
-        if (!preview.classList.contains('hidden')) {
-          preview.classList.add('hidden');
-        }
-      } else {
-        button.closest('div').querySelector('video').pause();
-        button.classList.remove('product-images__button--active');
-      }
-    });
-  }
+  // for (const button of videoPlayButton) {
+  //   button.addEventListener('click', () => {
+  //     if (!button.classList.contains('product-images__button--active')) {
+  //       playCurrentCardVideo(button);
+  //       const preview = button.closest('div').querySelector('.product-preview');
+  //       if (!preview.classList.contains('hidden')) {
+  //         preview.classList.add('hidden');
+  //       }
+  //     } else {
+  //       button.closest('div').querySelector('video').pause();
+  //       button.classList.remove('product-images__button--active');
+  //     }
+  //   });
+  // }
 });

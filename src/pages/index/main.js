@@ -82,33 +82,33 @@ document.addEventListener('DOMContentLoaded', () => {
    * Управление видео в карточках товара
    *
    */
-  const cardVideoControlButtons = document.querySelectorAll(
-    '.products-product__control'
-  ); // кнопка воспроизведения на карточках товаров
-  // управление видео и кнопкой в карточке товара
-  const playCurrentCardVideo = async (button) => {
-    try {
-      await button.closest('div').querySelector('video').play();
-      button.classList.add('products-product__control--active');
-    } catch (err) {
-      button.classList.remove('products-product__control--active');
-    }
-  };
-  // управление видео в карточках товаров
-  for (const button of cardVideoControlButtons) {
-    button.addEventListener('click', () => {
-      if (!button.classList.contains('products-product__control--active')) {
-        playCurrentCardVideo(button);
-        const preview = button.closest('div').querySelector('.product-preview');
-        if (!preview.classList.contains('hidden')) {
-          preview.classList.add('hidden');
-        }
-      } else {
-        button.closest('div').querySelector('video').pause();
-        button.classList.remove('products-product__control--active');
-      }
-    });
-  }
+  // const cardVideoControlButtons = document.querySelectorAll(
+  //   '.products-product__control'
+  // ); // кнопка воспроизведения на карточках товаров
+  // // управление видео и кнопкой в карточке товара
+  // const playCurrentCardVideo = async (button) => {
+  //   try {
+  //     await button.closest('div').querySelector('video').play();
+  //     button.classList.add('products-product__control--active');
+  //   } catch (err) {
+  //     button.classList.remove('products-product__control--active');
+  //   }
+  // };
+  // // управление видео в карточках товаров
+  // for (const button of cardVideoControlButtons) {
+  //   button.addEventListener('click', () => {
+  //     if (!button.classList.contains('products-product__control--active')) {
+  //       playCurrentCardVideo(button);
+  //       const preview = button.closest('div').querySelector('.product-preview');
+  //       if (!preview.classList.contains('hidden')) {
+  //         preview.classList.add('hidden');
+  //       }
+  //     } else {
+  //       button.closest('div').querySelector('video').pause();
+  //       button.classList.remove('products-product__control--active');
+  //     }
+  //   });
+  // }
 });
 
 window.addEventListener('load', () => {
@@ -117,6 +117,14 @@ window.addEventListener('load', () => {
    * Сторисы
    *
    */
+
+
+  const tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  console.log('test', firstScriptTag);
   // инициализация слайдера сторис
   const storiesSlider = new Swiper('.stories__slider', {
     direction: 'horizontal',
@@ -152,6 +160,7 @@ window.addEventListener('load', () => {
   let imageTimer; // таймер воспроизведения изображения
   let videoTimer; // таймер воспроизведения видео
   let video; // текущее видео
+  let done;
 
 
 
@@ -288,6 +297,22 @@ window.addEventListener('load', () => {
     // обнуление последних слайдов
     storiesStatus[i] = 0;
   }
+  function onYouTubeIframeAPIReady(player) {
+    return new YT.Player(player, {
+      // events: {
+      //   'onReady': onPlayerReady,
+      // }
+    });
+  }
+  function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.PLAYING && !done) {
+      setTimeout(stopVideo, 6000);
+      done = true;
+    }
+  }
+  function stopVideo(player) {
+    player.stopVideo();
+  }
 
   // Воспроизведение
   const playStory = async (storyNumber, action) => {
@@ -363,7 +388,7 @@ window.addEventListener('load', () => {
         currentBars[i].classList.add('story__progress-bar_finished');
       } else {
         // если видео
-        video = currentStoryItems[i].querySelector('video');
+        video = onYouTubeIframeAPIReady(currentStoryItems[i].querySelector('iframe'));
         time = video.duration;
         video.play();
         // то устанавливаем время анимации
@@ -468,8 +493,6 @@ window.addEventListener('load', () => {
     // начинаем воспроизведение в новом активном слайде
     playStory(storiesSlider.activeIndex);
   });
-
-
 
   storiesCloseButton.addEventListener('click', () => {
     closeStoriesContainer();

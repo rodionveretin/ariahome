@@ -1,3 +1,5 @@
+
+
 main {
   margin-top: 150px;
   margin-bottom: 45px;
@@ -1558,9 +1560,9 @@ main {
   }
   &__slider {
     top: 50%;
-    transform: translateY(-50%);
-    height: 90vh;
-    max-height: 800px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   &__item {
     max-width: 100%;

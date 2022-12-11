@@ -149,7 +149,6 @@ window.addEventListener('load', () => {
     if (number === 0) {
       slides[number].classList.add('active');
       slides[number + 1].classList.add('next');
-      number = 1;
     } else if (number === slides.length - 1) {
       slides[number].classList.add('active');
       slides[number - 1].classList.add('prev');
@@ -160,8 +159,16 @@ window.addEventListener('load', () => {
     }
     const slideWidth = parseInt(document.querySelector('.active').style.width, 10);
     const middleSlidePos = slideWidth * document.querySelectorAll('.my-card').length / 2 - slideWidth / 2;
+    console.log(middleSlidePos);
+    console.log(slideWidth * number);
     console.log(slideWidth);
-    carousel.style.left = `${middleSlidePos - slideWidth * number}px`;
+    console.log(number);
+    if (number === 0) {
+      carousel.style.left = `${middleSlidePos}px`;
+    } else {
+      carousel.style.left = `${middleSlidePos - slideWidth * number}px`;
+    }
+    
   };
 
 

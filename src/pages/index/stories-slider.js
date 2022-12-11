@@ -12,10 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slides[i].addEventListener('click', () => {
       if (slides[i].classList.contains('next')) {
         carousel.style.left = `${parseInt(carousel.style.left, 10) - current}px`;
-        console.log(`${parseInt(carousel.style.left, 10) - current}px`);
       } else if (slides[i].classList.contains('prev')) {
         carousel.style.left = `${parseInt(carousel.style.left, 10) + current}px`;
-        console.log(`${parseInt(carousel.style.left, 10) + current}px`);
       };
 
       slides[i].classList.remove('prev', 'next');
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const slideWidth = parseInt(document.querySelector('.active').style.width, 10);
-  carousel.style.left =
-    `${slideWidth * document.querySelectorAll('.my-card').length / 2 - slideWidth / 2}px`;
+  // const slideWidth = parseInt(document.querySelector('.active').style.width, 10);
+  // carousel.style.left = '0px';
+    // `${slideWidth * (document.querySelectorAll('.my-card').length / 2)/* - slideWidth / 2*/}px`;
 });
